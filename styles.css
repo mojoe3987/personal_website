@@ -115,6 +115,12 @@ a:focus {
   margin-bottom: 1rem;
 }
 
+.hero-sub {
+  margin: 0 0 1rem;
+  color: #1e293b;
+  max-width: 60ch;
+}
+
 .lead {
   font-size: 1.1rem;
   max-width: 38ch;
@@ -133,6 +139,7 @@ a:focus {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
 
 .btn {
@@ -177,6 +184,10 @@ a:focus {
   padding: 0;
   display: grid;
   gap: 0.75rem;
+}
+
+.hero-links {
+  margin-top: 1.5rem;
 }
 
 .section {
@@ -244,6 +255,32 @@ a:focus {
   color: #fff;
   border-radius: 999px;
   font-size: 0.9rem;
+}
+
+.profile-card .profile-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.profile-card .profile-links a {
+  text-align: center;
+}
+
+.highlight {
+  color: #0f62fe;
+  font-weight: 600;
+}
+
+.subheading {
+  font-size: 1.35rem;
+  margin: 2.5rem 0 0.75rem;
+  color: #0f172a;
+}
+
+.expertise-grid {
+  margin-top: 1rem;
 }
 
 .note {
@@ -332,6 +369,7 @@ a:focus {
   color: #475569;
 }
 
+
 .project a {
   font-weight: 600;
 }
@@ -344,17 +382,37 @@ a:focus {
   gap: 0.8rem;
 }
 
-.education-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.research-honors {
   display: grid;
-  gap: 1.2rem;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 1.5rem;
 }
 
-.education-list .year {
-  font-weight: 700;
-  color: #0f62fe;
+.honors-wrapper {
+  background: #eef2ff;
+  padding: 2.5rem 2rem 2rem;
+  margin: -1.5rem -2rem 0;
+  border-radius: 20px;
+}
+
+.publication-timeline {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.publication-timeline::before {
+  height: 100%;
+}
+
+.publication-timeline::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0;
+  width: 2px;
+  height: 28px;
+  background: #eef2ff;
 }
 
 .contact-card {
@@ -410,9 +468,31 @@ a:focus {
   color: #94a3b8;
 }
 
+.solutions-wrapper {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin-top: 2rem;
+}
+
+.solutions-column {
+  background: #eef2ff;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.06);
+}
+
+.org-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
+  }
+
+  .hero-media {
+    margin-top: 2.5rem;
   }
 
   .section-grid,
@@ -427,6 +507,10 @@ a:focus {
 
   .timeline-item {
     padding-left: 2rem;
+  }
+
+  .profile-card {
+    margin-top: 2rem;
   }
 }
 
@@ -462,6 +546,10 @@ a:focus {
 
   .contact-card {
     padding: 2rem;
+  }
+
+  .profile-card .profile-links {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
   }
 }
 
